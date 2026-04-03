@@ -1,1 +1,7 @@
-/bin/
+#Eclipse files
+.classpath
+.project
+.settings/
+
+#Compiled files
+bin/
