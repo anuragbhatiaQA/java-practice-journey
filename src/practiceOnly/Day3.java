@@ -1,4 +1,5 @@
 package practiceOnly;
+//Verified from Eclipse
 
 public class Day3 {
 

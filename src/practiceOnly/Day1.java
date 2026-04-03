@@ -2,7 +2,7 @@ package practiceOnly;
 
 //Day1.java   (strings + reverse + palindrome)
 public class Day1 {
-
+	// Verified from Eclipse
 	public static void main(String[] args) {
 		String str = "Madam ";
 		System.out.println(str);

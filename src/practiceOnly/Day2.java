@@ -1,4 +1,5 @@
 package practiceOnly;
+//Verified from Eclipse
 
 //Day2.java   (vowels + string practice)
 public class Day2 {
