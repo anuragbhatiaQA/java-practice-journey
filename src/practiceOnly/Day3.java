@@ -14,8 +14,7 @@ public class Day3 {
 			if (ch2== ' ') {
 				spaceCount++;
 			}
-		}System.out.println("Number of spaces in a String: " +spaceCount);
-		
+		}System.out.println("Number of spaces in a String: " +spaceCount);		
 		
 		//Remove Spaces from the String
 		String newStr ="";

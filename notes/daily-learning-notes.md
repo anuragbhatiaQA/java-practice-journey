@@ -115,7 +115,6 @@ bin/
 // Prevents future tracking
 
 
-
 // =========================
 // COMMON MISTAKES
 // =========================
@@ -137,3 +136,83 @@ bin/
 // Commit = approved release
 
 // Push = deploy to production (GitHub)
+
+// =========================
+// USER INPUT (Scanner)
+// =========================
+
+// Import Scanner
+import java.util.Scanner;
+
+// Create Scanner object
+Scanner sc = new Scanner(System.in);
+
+// Read full line (important)
+String str = sc.nextLine();
+
+// Close scanner
+sc.close();
+
+
+
+// =========================
+// STRING CLEANING
+// =========================
+
+// Remove spaces from start and end
+str = str.trim();
+
+// =========================
+// SPLIT STRING
+// =========================
+
+// Split string into words
+String[] arr = str.split("\\s+");
+
+// \\s+ means:
+// split on one or more spaces
+
+// =========================
+// ARRAY BASICS
+// =========================
+
+// Declare array
+String[] arr;
+
+// Length of array
+arr.length;
+
+
+// =========================
+// PRINT ARRAY (IMPORTANT)
+// =========================
+
+// Cannot print array directly ❌
+System.out.println(arr); // WRONG
+
+// Must use loop ✅
+for(int i = 0; i < arr.length; i++) {
+    System.out.println(arr[i]);
+}
+
+
+// =========================
+// WORD COUNT (SIMPLE WAY)
+// =========================
+
+// Number of words = array length
+int wordCount = arr.length;
+
+
+
+// =========================
+// KEY LEARNING (VERY IMPORTANT)
+// =========================
+
+// trim() → removes spaces from start/end
+
+// split("\\s+") → handles multiple spaces
+
+// Arrays cannot be printed directly
+
+// nextLine() reads full sentence (not just one word)

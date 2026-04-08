@@ -1,3 +1,13 @@
+<<<<<<< HEAD
 /bin/
 /.classpath
 /.project
+=======
+#Eclipse files
+.classpath
+.project
+.settings/
+
+#Compiled files
+bin/
+>>>>>>> branch 'main' of https://github.com/anuragbhatiaQA/java-practice-journey.git
