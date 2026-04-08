@@ -154,7 +154,6 @@ String str = sc.nextLine();
 sc.close();
 
 
-
 // =========================
 // STRING CLEANING
 // =========================
@@ -195,6 +194,8 @@ for(int i = 0; i < arr.length; i++) {
     System.out.println(arr[i]);
 }
 
+// String loop → use str.length() and charAt(i)
+// Array loop → use arr.length and arr[i]
 
 // =========================
 // WORD COUNT (SIMPLE WAY)
@@ -216,3 +217,93 @@ int wordCount = arr.length;
 // Arrays cannot be printed directly
 
 // nextLine() reads full sentence (not just one word)
+
+=========================
+DAY 5 – CHARACTER CLASSIFICATION
+=========================
+// Day 5: Classified each character using one loop and condition hierarchy
+// =========================
+// CHARACTER TYPES
+// =========================
+
+// Vowels
+a == 'a' || a == 'e' || a == 'i' || a == 'o' || a == 'u'
+
+// Consonants (letters but not vowels)
+a >= 'a' && a <= 'z'
+
+// Digits
+a >= '0' && a <= '9'
+
+// Space
+a == ' '
+
+// Special Characters
+// Anything that is NOT letter, digit, or space
+
+
+
+// =========================
+// IMPORTANT LOGIC (ORDER MATTERS)
+// =========================
+
+// Always check in this order:
+
+// 1. Vowels
+// 2. Consonants
+// 3. Digits
+// 4. Spaces
+// 5. Special Characters (else)
+
+// Reason:
+// Avoid overlapping conditions
+
+
+
+// =========================
+// ONE LOOP APPROACH
+// =========================
+
+// Use single loop to classify everything
+
+for(int i = 0; i < str.length(); i++) {
+    char a = str.charAt(i);
+}
+
+
+
+// =========================
+// LOWERCASE SIMPLIFICATION
+// =========================
+
+// Convert once to avoid checking A-Z and a-z
+str = str.toLowerCase();
+
+
+
+// =========================
+// ELSE-IF IMPORTANCE
+// =========================
+
+// Use else-if so each character is counted ONLY once
+
+if(...) {
+}
+else if(...) {
+}
+else if(...) {
+}
+
+
+
+// =========================
+// KEY LEARNING (VERY IMPORTANT)
+// =========================
+
+// Each character should fall into ONLY ONE category
+
+// Order of conditions affects output
+
+// Always simplify problem (like using toLowerCase())
+
+// One loop is more efficient than multiple loops
