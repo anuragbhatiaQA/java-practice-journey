@@ -307,3 +307,117 @@ else if(...) {
 // Always simplify problem (like using toLowerCase())
 
 // One loop is more efficient than multiple loops
+
+=========================
+DAY 6 – DUPLICATE CHARACTERS
+=========================
+
+// Problem:
+// Find duplicate characters in a string (print + count)
+
+// =========================
+// CORE IDEA
+// =========================
+
+// Compare each character with remaining characters
+
+for(int i = 0; i < str.length(); i++) {
+    char a = str.charAt(i);
+    
+    for(int j = i + 1; j < str.length(); j++) {
+        // compare a with next characters
+    }
+}
+
+// =========================
+// IMPORTANT CONDITIONS
+// =========================
+
+// Skip spaces
+if(a == ' ') {
+    continue;
+}
+
+// =========================
+// DUPLICATE CHECK
+// =========================
+
+// Check if same character appears later
+
+if(str.charAt(j) == a) {
+    isDuplicate = true;
+    break; // stop after first match
+}
+
+// =========================
+// ALREADY CHECKED LOGIC
+// =========================
+
+// Avoid counting same character again
+
+for(int k = 0; k < i; k++) {
+    if(str.charAt(k) == a) {
+        alreadyChecked = true;
+        break;
+    }
+}
+
+// =========================
+// RESET VARIABLES (VERY IMPORTANT)
+// =========================
+
+// Must reset for every character
+
+boolean alreadyChecked = false;
+boolean isDuplicate = false;
+
+// =========================
+// CONTINUE USAGE
+// =========================
+
+// Skip current iteration and move to next loop
+
+continue;
+
+// Used when:
+// - space
+// - already checked character
+
+// =========================
+// BREAK USAGE
+// =========================
+
+// Exit loop immediately
+
+break;
+
+// Used when:
+// - duplicate found
+// - already checked found
+
+// =========================
+// FINAL LOGIC FLOW (VERY IMPORTANT)
+// =========================
+
+// 1. Pick character
+// 2. Skip space
+// 3. Check duplicate (forward loop)
+// 4. Check already checked (backward loop)
+// 5. If already checked → skip
+// 6. If duplicate → count + print
+
+// =========================
+// KEY LEARNING (VERY IMPORTANT)
+// =========================
+
+// Nested loops help compare characters
+
+// break → stops loop early
+
+// continue → skips current iteration
+
+// Always reset flags inside loop
+
+// Sequence of steps matters a lot
+
+// Avoid duplicate counting using "already checked"
