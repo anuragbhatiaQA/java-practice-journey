@@ -421,3 +421,101 @@ break;
 // Sequence of steps matters a lot
 
 // Avoid duplicate counting using "already checked"
+
+=========================
+DAY 7 – FREQUENCY OF CHARACTERS
+=========================
+
+// Problem:
+// Count how many times each character appears in a string
+
+// =========================
+// CORE IDEA
+// =========================
+
+// For each character:
+// 1. Skip spaces
+// 2. Check if already processed (backward loop)
+// 3. If not → count occurrences (full loop)
+// 4. Print result
+
+for(int i = 0; i < str.length(); i++) {
+    char a = str.charAt(i);
+}
+
+// =========================
+// SKIP SPACES
+// =========================
+
+if(a == ' ') {
+    continue;
+}
+
+// =========================
+// ALREADY CHECKED LOGIC
+// =========================
+
+// Check if character already appeared before
+
+boolean alreadyChecked = false;
+
+for(int j = 0; j < i; j++) {
+    if(str.charAt(j) == a) {
+        alreadyChecked = true;
+        break;
+    }
+}
+
+// Skip if already counted
+
+if(alreadyChecked) {
+    continue;
+}
+
+// =========================
+// COUNT FREQUENCY
+// =========================
+
+// Count how many times character appears in string
+
+int count = 0;
+
+for(int k = 0; k < str.length(); k++) {
+    if(str.charAt(k) == a) {
+        count++;
+    }
+}
+
+// =========================
+// PRINT RESULT
+// =========================
+
+System.out.println(a + " -> " + count);
+
+// =========================
+// IMPORTANT DIFFERENCE (DAY 6 vs DAY 7)
+// =========================
+
+// Day 6 → Only check if duplicate exists
+// Day 7 → Count how many times it appears
+
+// =========================
+// KEY LEARNING (VERY IMPORTANT)
+// =========================
+
+// Separate logic into steps:
+// 1. Skip unwanted values
+// 2. Avoid reprocessing (alreadyChecked)
+// 3. Perform main logic (count)
+
+// Do NOT mix:
+// - checking logic
+// - counting logic
+
+// Order of steps is critical
+
+// Use continue to skip already processed characters
+
+// Nested loops:
+// outer → pick character
+// inner → check / count
