@@ -636,3 +636,115 @@ System.out.println(result);
 // Built new string step-by-step
 // Handled edge cases (spacing)
 // Learned conditional string building
+
+=========================
+DAY 9 – FIRST NON-REPEATING CHARACTER
+=========================
+
+// Problem:
+// Find the first character that appears only once in the string
+
+// =========================
+// CORE IDEA
+// =========================
+
+// For each character:
+// 1. Skip spaces (optional)
+// 2. Check if already processed (backward loop)
+// 3. If not → count frequency (full loop)
+// 4. If count == 1 → print and STOP
+
+for(int i = 0; i < str.length(); i++) {
+    char a = str.charAt(i);
+}
+
+// =========================
+// SKIP SPACES (OPTIONAL)
+// =========================
+
+if(a == ' ') {
+    continue;
+}
+
+// =========================
+// ALREADY CHECKED LOGIC
+// =========================
+
+// Avoid reprocessing same character
+
+boolean alreadyChecked = false;
+
+for(int j = 0; j < i; j++) {
+    if(str.charAt(j) == a) {
+        alreadyChecked = true;
+        break;
+    }
+}
+
+// Skip if already processed
+
+if(alreadyChecked) {
+    continue;
+}
+
+// =========================
+// COUNT FREQUENCY
+// =========================
+
+// Count occurrences of current character
+
+int count = 0;
+
+for(int k = 0; k < str.length(); k++) {
+    if(str.charAt(k) == a) {
+        count++;
+    }
+}
+
+// =========================
+// FIND FIRST NON-REPEATING
+// =========================
+
+// If character appears only once
+
+if(count == 1) {
+    System.out.println(a);
+    break; // STOP after first match
+}
+
+// =========================
+// KEY LEARNING (VERY IMPORTANT)
+// =========================
+
+// Reuse frequency logic from Day 7
+
+// Only first valid character needed
+
+// Use break to stop loop early
+
+// Separate:
+// - checking logic
+// - counting logic
+// - decision logic
+
+// =========================
+// CONTROL FLOW
+// =========================
+
+// continue → skip current character
+
+// break → stop entire loop when answer found
+
+// =========================
+// LOGIC PATTERN
+// =========================
+
+// Pick → Check → Skip → Count → Decide → Stop
+
+// =========================
+// DAY 9 SUMMARY
+// =========================
+
+// Found first non-repeating character
+// Used nested loops + frequency logic
+// Learned when to stop loop using break
