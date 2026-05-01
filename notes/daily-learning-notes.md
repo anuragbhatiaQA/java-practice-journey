@@ -748,3 +748,143 @@ if(count == 1) {
 // Found first non-repeating character
 // Used nested loops + frequency logic
 // Learned when to stop loop using break
+
+=========================
+DAY 10 – CHECK ANAGRAM
+=========================
+
+// Problem:
+// Check if two strings are anagrams
+// (same characters with same frequency, order doesn't matter)
+
+// =========================
+// INPUT HANDLING
+// =========================
+
+// Read two strings
+String str1 = sc.nextLine();
+String str2 = sc.nextLine();
+
+// Convert to lowercase
+str1 = str1.toLowerCase();
+str2 = str2.toLowerCase();
+
+// Optional: remove spaces
+str1 = str1.replace(" ", "");
+str2 = str2.replace(" ", "");
+
+// =========================
+// LENGTH CHECK (IMPORTANT)
+// =========================
+
+// If lengths differ → NOT anagram
+
+if(str1.length() != str2.length()) {
+    // Not anagram
+}
+
+// =========================
+// CORE IDEA
+// =========================
+
+// For each character in str1:
+// 1. Check if already processed
+// 2. Count frequency in str1
+// 3. Count frequency in str2
+// 4. Compare counts
+
+// =========================
+// ALREADY CHECKED LOGIC
+// =========================
+
+boolean alreadyChecked = false;
+
+for(int j = 0; j < i; j++) {
+    if(str1.charAt(j) == a) {
+        alreadyChecked = true;
+        break;
+    }
+}
+
+// Skip duplicate processing
+
+if(alreadyChecked) {
+    continue;
+}
+
+// =========================
+// COUNT FREQUENCY
+// =========================
+
+// Count in str1
+int count1 = 0;
+for(int k = 0; k < str1.length(); k++) {
+    if(str1.charAt(k) == a) {
+        count1++;
+    }
+}
+
+// Count in str2
+int count2 = 0;
+for(int k = 0; k < str2.length(); k++) {
+    if(str2.charAt(k) == a) {
+        count2++;
+    }
+}
+
+// =========================
+// COMPARISON LOGIC
+// =========================
+
+// If mismatch → NOT anagram
+
+if(count1 != count2) {
+    isAnagram = false;
+    break;
+}
+
+// =========================
+// FINAL RESULT
+// =========================
+
+if(isAnagram) {
+    System.out.println("Strings are ANAGRAM");
+} else {
+    System.out.println("Not an Anagram");
+}
+
+// =========================
+// CONTROL FLOW
+// =========================
+
+// continue → skip already processed character
+
+// break → stop loop when mismatch found
+
+// =========================
+// LOGIC PATTERN
+// =========================
+
+// Pick → Check → Skip → Count → Compare → Decide
+
+// =========================
+// KEY LEARNING (VERY IMPORTANT)
+// =========================
+
+// Compare two strings using frequency logic
+
+// Do NOT compare character by position
+
+// Use alreadyChecked to avoid duplicate work
+
+// Use break for early exit
+
+// Validate input early (length check)
+
+// =========================
+// DAY 10 SUMMARY
+// =========================
+
+// Compared two strings using frequency matching
+// Reused Day 7 + Day 6 concepts
+// Learned validation + early exit logic
