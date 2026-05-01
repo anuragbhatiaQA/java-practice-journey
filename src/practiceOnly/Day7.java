@@ -17,15 +17,15 @@ public class Day7 {
 		for(int i=0; i<str.length();i++) {
 			//Skip spaces
 			
-		//char a=str.charAt(i); 
-			if(str.charAt(i) == ' ') {
+		char a=str.charAt(i); 
+			if(a == ' ') {
 				continue;
 			}
 			//Check if already counted
 			boolean alreadyChecked = false;
 			for(int j=0;j<i;j++) {
 				//If yes → skip
-				if(str.charAt(j)==str.charAt(i)) {
+				if(str.charAt(j)==a) {
 					alreadyChecked=true;
 					break;
 				}
@@ -35,7 +35,7 @@ public class Day7 {
 				//Checking if Character is already checked
 				int count=0;
 				for(int k=0;k<str.length();k++) {
-					if(str.charAt(k)==str.charAt(i)) {
+					if(str.charAt(k)==a) {
 					count++;
 					}
 				

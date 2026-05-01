@@ -505,7 +505,7 @@ System.out.println(a + " -> " + count);
 
 // Separate logic into steps:
 // 1. Skip unwanted values
-// 2. Avoid reprocessing (alreadyChecked)
+// 2. Avoid re-processing (alreadyChecked)
 // 3. Perform main logic (count)
 
 // Do NOT mix:
@@ -519,3 +519,120 @@ System.out.println(a + " -> " + count);
 // Nested loops:
 // outer → pick character
 // inner → check / count
+
+=========================
+DAY 8 – REMOVE DUPLICATE CHARACTERS
+=========================
+
+// Problem:
+// Remove duplicate characters from a string
+// Keep only first occurrence
+
+// =========================
+// CORE IDEA
+// =========================
+
+// For each character:
+// 1. Skip spaces (optional)
+// 2. Check if already seen before (backward loop)
+// 3. If yes → skip
+// 4. If no → add to result
+
+for(int i = 0; i < str.length(); i++) {
+    char a = str.charAt(i);
+}
+
+// =========================
+// SKIP SPACES (OPTIONAL)
+// =========================
+
+if(a == ' ') {
+    continue;
+}
+
+// =========================
+// ALREADY CHECKED LOGIC
+// =========================
+
+boolean alreadyChecked = false;
+
+for(int j = 0; j < i; j++) {
+    if(str.charAt(j) == a) {
+        alreadyChecked = true;
+        break;
+    }
+}
+
+// Skip duplicate characters
+
+if(alreadyChecked) {
+    continue;
+}
+
+// =========================
+// BUILD RESULT STRING
+// =========================
+
+// Add character to result only if not duplicate
+
+result = result + a;
+
+// =========================
+// STRING FORMATTING (IMPORTANT)
+// =========================
+
+// Add space between characters (no leading/trailing space)
+
+// First character → no space
+// Next characters → add space before
+
+if(result.isEmpty()) {
+    result = result + a;
+} else {
+    result = result + " " + a;
+}
+
+// =========================
+// FINAL OUTPUT
+// =========================
+
+System.out.println(result);
+
+// =========================
+// KEY LEARNING (VERY IMPORTANT)
+// =========================
+
+// Remove duplicates using "alreadyChecked" logic
+
+// Do NOT process same character again
+
+// Build string dynamically
+
+// Handle formatting carefully:
+// - avoid extra space at start
+// - avoid extra space at end
+
+// First element is special case
+
+// =========================
+// CONTROL FLOW USAGE
+// =========================
+
+// continue → skip current character
+
+// break → stop loop early when match found
+
+// =========================
+// LOGIC PATTERN (REUSABLE)
+// =========================
+
+// Pick → Check → Skip → Add
+
+// =========================
+// DAY 8 SUMMARY
+// =========================
+
+// Removed duplicate characters
+// Built new string step-by-step
+// Handled edge cases (spacing)
+// Learned conditional string building
