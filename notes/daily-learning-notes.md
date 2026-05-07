@@ -885,6 +885,104 @@ if(isAnagram) {
 // DAY 10 SUMMARY
 // =========================
 
-// Compared two strings using frequency matching
-// Reused Day 7 + Day 6 concepts
-// Learned validation + early exit logic
+=========================
+DAY 11 – HASHMAP LEARNING
+=========================
+What is HashMap?
+// HashMap stores data in key → value pairs
+// In our problems:
+// character → count
+// Example:
+// r → 2
+// g → 2
+
+HashMap Declaration
+HashMap<Character, Integer> occurance = new HashMap<>();
+// Character = key
+// Integer = value/count
+
+Core HashMap Methods
+// put(key, value)// add OR update value// get(key)// fetch value of key// containsKey(key)// check if key exists// keySet()// gives all keys// values()// gives all values// remove(key)// removes key-value pair
+
+Building Frequency Map
+Loop through string↓Pick character↓Check if already exists↓If YES → increase countIf NO → add with count 1
+
+Inserting New Character
+occurance.put(a, 1);
+// First occurrence of character
+// Example:
+// p → 1
+
+Updating Existing Character
+occurance.put(a, occurance.get(a) + 1);
+// Fetch old value
+// Add 1
+// Store updated value back
+// Example:
+// r → 1 becomes r → 2
+
+Fetching Current Value
+occurance.get(a)
+// Gives current count/value
+
+Checking Existing Key
+occurance.containsKey(a)
+// Returns:
+// true  → key exists
+// false → key does not exist
+
+Iterating Through HashMap Keys
+for(char key : occurance.keySet())
+// Loop through all keys/characters
+
+Iterating Through Values
+for(int currentValue : highestFrequency.values())
+// Loop through all frequency values only
+// Example:
+// 1, 2, 2, 3
+
+Finding Maximum Frequency
+if(currentValue > maxFrequency)    maxFrequency = currentValue;
+// Compare current value with max
+// Update max if bigger value found
+
+Printing Duplicates
+if(occurance.get(key) > 1)
+// If frequency > 1
+// Character is duplicate
+
+Printing Character + Frequency
+System.out.println(key + "-" + occurance.get(key));
+// Example:
+// r-2
+
+First Repeating Character Logic
+While traversing string:If character already exists in HashMap→ print and break
+// Detect during traversal
+// Not after full traversal
+
+Highest Frequency Character Logic
+Step 1 → Find max frequency using values()Step 2 → Traverse keysStep 3 → Print first key having max frequencyStep 4 → break
+
+Important HashMap Understanding
+String = source of dataLoop = extracts charactersHashMap = stores character → count
+
+Most Important Learning of Day 11
+OLD APPROACH ❌
+Nested loopsRepeated comparisonSlow
+NEW APPROACH ✔
+Store onceReuse anytimeFast
+
+One-Line Memory
+HashMap = character → count storage
+
+DAY 11 SUMMARY
+// Learned HashMap basics
+// Inserted values
+// Updated existing values
+// Traversed keys
+// Traversed values
+// Found duplicates
+// Found first repeating character
+// Found highest frequency character
+// Used break correctly with HashMap logic
